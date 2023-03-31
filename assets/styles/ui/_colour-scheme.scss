@@ -1,0 +1,29 @@
+@import '@/assets/styles/imports.scss';
+
+html * {
+  // font-family: 'Montserrat-Light', sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+
+  @include boxReset;
+}
+
+body {
+  background-color: $page-bg-light;
+  transition: background-color linear 2000ms;
+
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: $page-bg-dark;
+  // }
+
+  & * {
+    color: $base-font-light;
+
+    // @media (prefers-color-scheme: dark) {
+    //   color: $base-font-dark-mode;
+    // }
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+// }

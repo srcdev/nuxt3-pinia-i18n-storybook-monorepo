@@ -56,69 +56,69 @@ const {} = defineProps({
 </script>
 
 <style lang="scss">
-// @import '@/assets/styles/imports.scss';
+@import "@styles/imports.scss";
 
 .flex-group {
-  // @include minWidth($tabletSmall) {
-  display: flex;
-  flex-flow: column;
-  gap: v-bind(gap);
-  overflow: hidden;
+  @include minWidth($tabletSmall) {
+    display: flex;
+    flex-flow: column;
+    gap: v-bind(gap);
+    overflow: hidden;
 
-  &.inline-flex {
-    display: inline-flex;
+    &.inline-flex {
+      display: inline-flex;
+    }
+
+    &.flow {
+      &-column {
+        flex-flow: column;
+      }
+      &-column-reverse {
+        flex-flow: column-reverse;
+      }
+      &-row {
+        flex-flow: row;
+      }
+      &-row-reverse {
+        flex-flow: row-reverse;
+      }
+    }
+
+    &.align-items {
+      &-center {
+        align-items: center;
+      }
+
+      &-top {
+        align-items: start;
+      }
+
+      &-bottom {
+        align-items: end;
+      }
+    }
+
+    &.justify-content {
+      &-center {
+        justify-content: center;
+      }
+
+      &-left {
+        justify-content: start;
+      }
+
+      &-right {
+        justify-content: end;
+      }
+
+      &-space-around {
+        justify-content: space-around;
+      }
+
+      &-space-between {
+        justify-content: space-between;
+      }
+    }
   }
-
-  &.flow {
-    &-column {
-      flex-flow: column;
-    }
-    &-column-reverse {
-      flex-flow: column-reverse;
-    }
-    &-row {
-      flex-flow: row;
-    }
-    &-row-reverse {
-      flex-flow: row-reverse;
-    }
-  }
-
-  &.align-items {
-    &-center {
-      align-items: center;
-    }
-
-    &-top {
-      align-items: start;
-    }
-
-    &-bottom {
-      align-items: end;
-    }
-  }
-
-  &.justify-content {
-    &-center {
-      justify-content: center;
-    }
-
-    &-left {
-      justify-content: start;
-    }
-
-    &-right {
-      justify-content: end;
-    }
-
-    &-space-around {
-      justify-content: space-around;
-    }
-
-    &-space-between {
-      justify-content: space-between;
-    }
-  }
-  // }
 }
 </style>

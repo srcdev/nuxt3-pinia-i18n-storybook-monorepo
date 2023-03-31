@@ -16,6 +16,6 @@ export default defineNuxtModule({
     addPlugin(resolve("lib/plugins/helper.ts"));
 
     // add external css libs
-    // nuxt.options.css.push('path/to.lib.css')
+    // nuxt.options.css.push("../../../../assets/styles/imports.scss");
   },
 });

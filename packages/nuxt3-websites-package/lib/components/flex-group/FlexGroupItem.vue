@@ -42,9 +42,10 @@ const {} = defineProps({
 </script>
 
 <style scoped lang="scss">
-// @import '@/assets/styles/imports.scss';
+@import "@styles/imports.scss";
 
 .flex-group-item {
+  border: 1px solid $black;
   &.grow {
     flex-grow: 1;
   }

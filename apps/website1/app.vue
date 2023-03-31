@@ -1,7 +1,5 @@
 <template>
   <div>
-    <nx3-btn> {{ $hello("website 1") }} </nx3-btn>
-
     <nx3-flex-group>
       <template #flexGroup>
         <nx3-flex-group-item :flex-grow="true">

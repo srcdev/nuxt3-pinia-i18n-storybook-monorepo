@@ -1,0 +1,19 @@
+@import "fonts/default-typography.scss";
+@import "ui/index.scss";
+// @import 'partials/_theme_typography';
+// @import "ui/_breakpoints";
+// @import 'partials/_theme_colours';
+// @import 'partials/_theme_fonts';
+// @import 'partials/_theme_buttons';
+// @import 'ui/_icons';
+// @import 'ui/_scaffolding';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}

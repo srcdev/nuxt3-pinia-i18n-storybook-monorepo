@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Variable"),
+    url("/assets/fonts/Montserrat-Variable.woff2") format("woff2");
+}
+
+html * {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}

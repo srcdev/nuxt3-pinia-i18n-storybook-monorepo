@@ -1,0 +1,60 @@
+@import "@/assets/styles/imports.scss";
+
+
+.text-header-large {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: clamp(0.6rem, 4vw, 1rem);
+}
+
+.text-header-medium {
+  font-weight: 700;
+}
+
+.text-header-small {
+  font-weight: 700;
+}
+
+.text-body-large {
+  font-weight: normal;
+}
+
+p,
+.text-body-normal {
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  font-weight: normal;
+  line-height: clamp(2.1rem, 4vw, 2.6rem);
+  margin-bottom: clamp(0.6rem, 4vw, 1rem);
+}
+
+.text-body-small {
+  font-weight: normal;
+}
+
+.txt-colour-dark-bg {
+  color: $base-font-dark-mode;
+}
+
+.text-bold-2 {
+  font-size: 2vh;
+  font-weight: bold;
+  line-height: 3vh;
+  color: grey;
+}
+
+.text-fancy-header {
+  align-items: center;
+  display: flex;
+  border-bottom: 3px solid #265b96;
+  color: #265b96;
+  font-size: 40px;
+  padding-bottom: 12px;
+  .fancy {
+    color: #265b96;
+    font-family: 'Greatvibes', cursive;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    margin-right: 12px;
+  }
+}
