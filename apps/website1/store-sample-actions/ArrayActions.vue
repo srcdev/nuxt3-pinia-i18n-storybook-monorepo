@@ -53,5 +53,5 @@ const addToStore =  async() => {
 </script>
 
 <style lang="scss">
-@import "@/assets/styles/imports.scss";
+@import "@styles/imports.scss";
 </style>

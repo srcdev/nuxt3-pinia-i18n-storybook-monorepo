@@ -19,10 +19,19 @@
     "nuxt": "^3.1.2",
     "pinia": "^2.0.30",
     "pinia-plugin-persistedstate": "^3.0.2",
-    "vue-loader": "^16.8.3"
+    "vue-loader": "^16.8.3",
+    "storybook-i18n": "^1.1.4",
+    "@storybook/addon-a11y": "^6.5.16",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.16"
   },
   "dependencies": {
     "nuxt3-websites-package": "workspace:^1.0.0",
+    "@storybook/builder-vite": "^0.4.2",
     "axios": "^1.3.3",
     "sass": "^1.58.0"
   }

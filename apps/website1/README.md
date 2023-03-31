@@ -6,6 +6,8 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 Make sure to install the dependencies:
 
+`pnpm install --shamefully-hoist` is prefered method, npm or yarn will mostly likely fail
+
 ```bash
 # yarn
 yarn install
@@ -17,26 +19,58 @@ npm install
 pnpm install --shamefully-hoist
 ```
 
-## Development Server
 
-Start the development server on http://localhost:3000
+### Install Errors
 
-```bash
-npm run dev
+If `npm install` exits with errors for peer dependancies in Vue packages:
+
+- Remove storybook package entries from `package.json`
+- Do an `npm install` then add the Storybook packages back into the json and run `pnpm install --shamefully-hoist`
+
+```javascript
+{
+  "devDependencies": {
+    "storybook-i18n": "^1.1.4",
+    "@storybook/addon-a11y": "^6.5.16",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.16"
+  },
+  "dependencies": {
+    "@storybook/builder-vite": "^0.4.2",
+  }
+}
 ```
 
-## Production
+# From root dir, use following to run applications
 
-Build the application for production:
+## Start dev mode:
 
-```bash
-npm run build
+```shell
+pnpm run -r dev
 ```
 
-Locally preview production build:
+## Build applications:
 
-```bash
-npm run preview
+```shell
+pnpm run -r build
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+## Start specific application
+
+*website1* corresponds to the name of the application within its `package.json`
+
+```shell
+pnpm --filter website1 run dev
+```
+
+## Adding components to 'packages'
+
+Before you can use a new component, it needs installing:
+
+```shell
+pnpm i
+```
