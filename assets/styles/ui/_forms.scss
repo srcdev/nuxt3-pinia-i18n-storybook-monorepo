@@ -1,4 +1,4 @@
-@import "@/assets/styles/imports.scss";
+@import "../imports.scss";
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -10,9 +10,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 0px solid $input-border-light;
+  border: 0px solid $black;
   -webkit-text-fill-color: initial;
-  -webkit-box-shadow: 0 0 0px 0px $input-border-light inset;
-  box-shadow: 0 0 0px 0px $input-border-light inset;
+  -webkit-box-shadow: 0 0 0px 0px $black inset;
+  box-shadow: 0 0 0px 0px $black inset;
   transition: background-color 5000s ease-in-out 0s;
 }

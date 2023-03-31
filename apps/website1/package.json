@@ -3,13 +3,23 @@
   "name": "website1",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "serve-storybook": "npx http-server ./storybook-static"
   },
   "devDependencies": {
-    "nuxt": "^3.1.2"
+    "@babel/core": "^7.20.12",
+    "@nuxtjs/i18n": "^8.0.0-beta.7",
+    "@pinia/nuxt": "^0.4.6",
+    "babel-loader": "^8.3.0",
+    "nuxt": "^3.1.2",
+    "pinia": "^2.0.30",
+    "pinia-plugin-persistedstate": "^3.0.2",
+    "vue-loader": "^16.8.3"
   },
   "dependencies": {
     "nuxt3-websites-package": "workspace:^1.0.0",

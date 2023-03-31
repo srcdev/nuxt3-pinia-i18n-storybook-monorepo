@@ -21,6 +21,19 @@ nvm use
 pnpm i
 ```
 
+### Install Errors
+
+If `npm install` exits with errors for peer dependancies in Vue packages:
+
+- Remove storybook package entries from `package.json`
+- Run the following package installs manually.
+
+```bash
+npm install --save-dev @storybook/vue3 @storybook/addon-actions @storybook/addon-essentials @storybook/addon-interactions @storybook/addon-a11y @storybook/addon-links @storybook/testing-library storybook-i18n
+
+npm install --save @storybook/builder-vite
+```
+
 ## Start dev mode:
 
 ```shell
