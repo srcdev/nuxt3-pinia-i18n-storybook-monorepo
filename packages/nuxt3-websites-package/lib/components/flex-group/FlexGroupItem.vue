@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="flex-group-item"
-    :class="[{ grow: flexGrow }]"
-    :align-content="`${alignItems}-${justifyItems}`"
-    :placement="`${placementX}-${placementY}`"
-  >
+  <div class="flex-group-item" :class="[{ grow: flexGrow }]">
     <slot name="flexItem"></slot>
   </div>
 </template>
@@ -15,29 +10,6 @@ const {} = defineProps({
     type: Boolean,
     default: false,
   },
-  alignItems: {
-    type: String,
-    default: "top",
-    validator: (val: string) => ["center", "top", "bottom"].includes(val),
-  },
-  justifyItems: {
-    type: String,
-    default: "left",
-    validator: (val: string) =>
-      ["center", "left", "right", "space-around", "space-between"].includes(
-        val
-      ),
-  },
-  placementX: {
-    type: String,
-    default: "top",
-    validator: (val: string) => ["center", "top", "bottom"].includes(val),
-  },
-  placementY: {
-    type: String,
-    default: "left",
-    validator: (val: string) => ["center", "left", "right"].includes(val),
-  },
 });
 </script>
 
@@ -45,7 +17,6 @@ const {} = defineProps({
 @import "@styles/imports.scss";
 
 .flex-group-item {
-  border: 1px solid $black;
   &.grow {
     flex-grow: 1;
   }

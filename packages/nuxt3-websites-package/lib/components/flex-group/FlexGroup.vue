@@ -2,11 +2,12 @@
   <div
     class="flex-group"
     :class="[
+      'flex-group',
       `flow-${flexFlow}`,
-      `align-items-${alignItems}`,
-      `justify-content-${justifyItems}`,
       { 'inline-flex': flexType === 'inline-flex' },
+      { 'full-width': fullWidth },
     ]"
+    :align-content="alignContent"
   >
     <slot name="flexGroup"></slot>
   </div>
@@ -25,32 +26,35 @@ const {} = defineProps({
     validator: (val: string) =>
       ["column", "column-reverse", "row", "row-reverse"].includes(val),
   },
-  alignItems: {
+  alignContent: {
     type: String,
-    default: "top",
-    validator: (val: string) => ["center", "top", "bottom"].includes(val),
-  },
-  justifyItems: {
-    type: String,
-    default: "left",
+    default: "top-left",
     validator: (val: string) =>
-      ["center", "left", "right", "space-around", "space-between"].includes(
-        val
-      ),
-  },
-  placementX: {
-    type: String,
-    default: "top",
-    validator: (val: string) => ["center", "top", "bottom"].includes(val),
-  },
-  placementY: {
-    type: String,
-    default: "left",
-    validator: (val: string) => ["center", "left", "right"].includes(val),
+      [
+        "top-center",
+        "center-center",
+        "bottom-center",
+        "top-left",
+        "center-left",
+        "bottom-left",
+        "top-right",
+        "center-right",
+        "bottom-right",
+        "top-space-around",
+        "center-space-around",
+        "bottom-space-around",
+        "top-space-between",
+        "center-space-between",
+        "bottom-space-between",
+      ].includes(val),
   },
   gap: {
     type: String,
     default: "0",
+  },
+  fullWidth: {
+    type: Boolean,
+    default: true,
   },
 });
 </script>
@@ -59,65 +63,39 @@ const {} = defineProps({
 @import "@styles/imports.scss";
 
 .flex-group {
-  @include minWidth($tabletSmall) {
-    display: flex;
-    flex-flow: column;
-    gap: v-bind(gap);
-    overflow: hidden;
+  border: 0px solid green;
+  * {
+    border: 0px solid green;
+  }
+  // @include minWidth($tabletSmall) {
+  display: flex;
+  // flex-flow: row;
+  gap: v-bind(gap);
+  overflow: hidden;
 
-    &.inline-flex {
-      display: inline-flex;
+  min-height: 200px;
+  margin-bottom: 20px;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.inline-flex {
+    display: inline-flex;
+  }
+
+  &.flow {
+    &-column {
+      flex-flow: column;
     }
-
-    &.flow {
-      &-column {
-        flex-flow: column;
-      }
-      &-column-reverse {
-        flex-flow: column-reverse;
-      }
-      &-row {
-        flex-flow: row;
-      }
-      &-row-reverse {
-        flex-flow: row-reverse;
-      }
+    &-column-reverse {
+      flex-flow: column-reverse;
     }
-
-    &.align-items {
-      &-center {
-        align-items: center;
-      }
-
-      &-top {
-        align-items: start;
-      }
-
-      &-bottom {
-        align-items: end;
-      }
+    &-row {
+      flex-flow: row;
     }
-
-    &.justify-content {
-      &-center {
-        justify-content: center;
-      }
-
-      &-left {
-        justify-content: start;
-      }
-
-      &-right {
-        justify-content: end;
-      }
-
-      &-space-around {
-        justify-content: space-around;
-      }
-
-      &-space-between {
-        justify-content: space-between;
-      }
+    &-row-reverse {
+      flex-flow: row-reverse;
     }
   }
 }
