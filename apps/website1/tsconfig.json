@@ -3,7 +3,8 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "strict": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "skipLibCheck": true
   },
   // "include": ["**/*.d.ts", "**/*", "**/*.vue"],
   "exclude": ["**/*.stories.ts"]

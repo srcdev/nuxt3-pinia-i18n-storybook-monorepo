@@ -2,7 +2,8 @@
   // https://v3.nuxtjs.org/concepts/typescript
   "compilerOptions": {
     "strict": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "allowJs": true
   },
   // "include": ["**/*.d.ts", "**/*", "**/*.vue"],
   "exclude": ["**/*.stories.ts"]

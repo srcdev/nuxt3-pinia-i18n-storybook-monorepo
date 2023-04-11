@@ -9,7 +9,8 @@
 </template>
 
 <script setup lang="ts">
-// import Footer from "@/components/functional/footer/Footer.vue";
+// import Footer from "@packages/footer/Footer.vue"; // Shared Footer direct import
+// import Footer from "@/components/functional/footer/Footer.vue"; // Local Footer via normal import
 // import Header from "@/components/functional/header/Header.vue";
 </script>
 

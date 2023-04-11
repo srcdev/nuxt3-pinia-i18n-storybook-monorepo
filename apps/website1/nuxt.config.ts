@@ -3,7 +3,9 @@ import { defineNuxtConfig } from "nuxt/config";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   alias: {
-    "@styles": fileURLToPath(new URL("../../assets/styles", import.meta.url)),
+    "@styles": fileURLToPath(new URL("../../shared/assets/styles", import.meta.url)),
+    "@shared/composables": fileURLToPath(new URL("../../shared/composables", import.meta.url)),
+    "@packages": fileURLToPath(new URL("../../packages/nuxt3-websites-package/lib/components", import.meta.url)),
   },
   ssr: false,
   css: [fileURLToPath(new URL("../../assets/styles/index.scss", import.meta.url))],
