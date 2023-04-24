@@ -22,11 +22,11 @@ const Template: StoryFn<typeof FlexGroup> = (args) => ({
   setup() {
     return { args };
   },
-  // template: `
-  //   <FlexGroup v-bind="args">
-  //     <template v-slot:flexGroup>${args.default}</template>
-  //   </FlexGroup>
-  // `,
+  template: `
+    <FlexGroup v-bind="args">
+      <template v-slot:flexGroup>${args.default}</template>
+    </FlexGroup>
+  `,
 });
 
 export const FlowRow = Template.bind({});

@@ -15,7 +15,7 @@
 </script>
 
 <style lang="scss">
-@import "@styles/imports.scss";
+@import "@shared/styles/imports.scss";
 
 .page {
   &-wrapper {

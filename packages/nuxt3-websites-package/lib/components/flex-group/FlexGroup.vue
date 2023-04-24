@@ -60,7 +60,7 @@ const {} = defineProps({
 </script>
 
 <style lang="scss">
-@import "@styles/imports.scss";
+@import "@shared/styles/imports.scss";
 
 .flex-group {
   border: 0px solid green;
