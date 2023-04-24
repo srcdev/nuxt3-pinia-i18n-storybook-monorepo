@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type PropType } from "vue";
+import { shallowRef, type PropType } from "vue";
 import { useI18n } from 'vue-i18n'
 import { storeToRefs } from "pinia";
 import { useRootStore } from "@/stores/store.root"; // Only need to import here due to lack of imports support within Storybook.
@@ -38,7 +38,7 @@ const { sbArrayItem } = defineProps({
   }
 });
 const { t } = useI18n()
-const buttonText = ref(t("store-sample-actions.array-actions.button-text-add"))
+const buttonText = shallowRef(t("store-sample-actions.array-actions.button-text-add"))
 
 const rootStore = useRootStore();
 const { sbArray } = storeToRefs(rootStore);
@@ -53,5 +53,5 @@ const addToStore =  async() => {
 </script>
 
 <style lang="scss">
-@import "@styles/imports.scss";
+@import "@shared/styles/imports.scss";
 </style>

@@ -38,7 +38,7 @@ const footerLinks = [
 </script>
 
 <style lang="scss">
-@import "@styles/imports.scss";
+@import "@shared/styles/imports.scss";
 
 .footer {
   // $self: &;

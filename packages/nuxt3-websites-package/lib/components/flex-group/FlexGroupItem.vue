@@ -14,7 +14,7 @@ const {} = defineProps({
 </script>
 
 <style scoped lang="scss">
-@import "@styles/imports.scss";
+@import "@shared/styles/imports.scss";
 
 .flex-group-item {
   &.grow {
