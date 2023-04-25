@@ -49,7 +49,7 @@ pnpm run -r build
 ## Start specific application
 
 ```shell
-pnpm --filter website1 run dev
+pnpm --filter baseapp run dev
 ```
 
 ## Adding components to 'packages'

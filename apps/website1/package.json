@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "website1",
+  "name": "baseapp",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --https --dotenv .env",

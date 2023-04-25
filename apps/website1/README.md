@@ -61,10 +61,10 @@ pnpm run -r build
 
 ## Start specific application
 
-*website1* corresponds to the name of the application within its `package.json`
+*baseapp* corresponds to the name of the application within its `package.json`
 
 ```shell
-pnpm --filter website1 run dev
+pnpm --filter baseapp run dev
 ```
 
 ## Adding components to 'packages'

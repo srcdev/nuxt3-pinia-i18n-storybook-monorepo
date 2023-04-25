@@ -1,6 +1,6 @@
 {
   "footer": {
-    "title": "Footer text from website1 i18n entry",
+    "title": "Footer text from baseapp i18n entry",
     "links": {
       "home": {
         "text": "Homepage",
