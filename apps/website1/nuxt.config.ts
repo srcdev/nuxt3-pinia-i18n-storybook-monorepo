@@ -1,7 +1,13 @@
 import { fileURLToPath } from "url";
 import { defineNuxtConfig } from "nuxt/config";
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
+  devServer: {
+    https: {
+      key: 'localhost-key.pem',
+      cert: 'localhost.pem'
+    }
+  },
   alias: {
     "@shared/styles": fileURLToPath(new URL("../../shared/assets/styles", import.meta.url)),
     "@shared/composables": fileURLToPath(new URL("../../shared/composables", import.meta.url)),

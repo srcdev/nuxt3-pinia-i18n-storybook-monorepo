@@ -3,7 +3,7 @@
   "name": "website1",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --dotenv .env",
+    "dev": "nuxt dev --https --dotenv .env",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
